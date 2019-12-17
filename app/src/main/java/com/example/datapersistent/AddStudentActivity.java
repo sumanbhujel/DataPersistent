@@ -2,6 +2,7 @@ package com.example.datapersistent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,7 @@ public class AddStudentActivity extends AppCompatActivity {
 
         dbHelper = new DbHelper(this);
         addStudent();
+        showList();
     }
 
     public void addStudent() {
@@ -48,6 +50,16 @@ public class AddStudentActivity extends AppCompatActivity {
                     editTextE.setText("");
                     editTextP.setText("");
                 }
+            }
+        });
+    }
+
+    private void showList() {
+        buttonShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddStudentActivity.this, ShowStudentActivity.class);
+                startActivity(intent);
             }
         });
 
