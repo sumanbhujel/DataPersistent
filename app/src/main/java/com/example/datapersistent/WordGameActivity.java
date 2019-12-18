@@ -25,7 +25,7 @@ public class WordGameActivity extends AppCompatActivity {
     Button buttonOk, buttonClear, buttonReset;
     RecyclerView recyclerView;
 
-    String[] words = {"APPLE", "ORANGE", "GRAPES"};
+    String[] words = {"BANANA","GUAVA","PEACH","APPLE","PINEAPPLE", "ORANGE", "GRAPES"};
     SharedPreferences sharedPreferences;
     int level = 0;
 
